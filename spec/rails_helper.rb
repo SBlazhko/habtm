@@ -31,7 +31,7 @@ ActiveRecord::Migration.maintain_test_schema!
 Capybara.configure do |config|
   config.run_server = false
   config.default_driver = :poltergeist
-  config.app_host = 'http://localhost:3000'
+  config.app_host = 'https://pure-retreat-73597.herokuapp.com/'
 end
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
