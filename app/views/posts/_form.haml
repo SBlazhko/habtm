@@ -1,0 +1,17 @@
+= form_for @post do |f|
+  %p
+    = f.label :title
+  %p
+    = f.text_field :title, placeholder: "title"
+  %p
+    = f.label :text
+  %p
+    = f.text_area :text, placeholder: "text"
+  %p
+    = f.label "Add categories to post"
+  %p
+    - @categories.each do |category|
+      = label_tag "#{category.name}"
+      = check_box_tag "[category_ids][]", category.id, @post.category_ids.include?(category.id)
+  %p
+    = f.submit "Create post"

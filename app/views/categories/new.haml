@@ -1,0 +1,8 @@
+New category
+= form_for @category do |f|
+  %p
+    = f.label :name
+  %p
+    = f.text_field :name, placeholder: "enter category name"
+  %p
+    = f.submit "Add category" 

@@ -1,0 +1,19 @@
+= link_to "Add category", new_category_path
+= link_to "Add post", new_post_path
+%br
+%table
+  %thead
+    %th Post name
+    %th Post text
+    %th Post categories
+  - @posts.each do |post|
+    %tbody
+      %td 
+        = post.title
+      %td 
+        = post.text
+      %td 
+        = post.categories.map(&:name)
+      %td
+        = link_to "delete", post_path(post), method: :delete
+
